@@ -19,7 +19,7 @@ mod generators;
 mod types;
 use types::{Complexity, DevelopmentType, JargonLevel};
 
-/// A CLI tool that generates impressive-looking terminal output when stakeholders walk by alla
+/// A CLI tool that generates impressive-looking terminal output when stakeholders walk by
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {

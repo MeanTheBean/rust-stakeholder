@@ -4,3 +4,4 @@ pub mod jargon;
 pub mod metrics;
 pub mod network_activity;
 pub mod system_monitoring;
+pub mod fake_error;

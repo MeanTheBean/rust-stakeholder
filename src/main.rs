@@ -12,6 +12,10 @@ use std::{
     time::{Duration, Instant},
 };
 
+use crate::generators::{
+    fake_error
+};
+
 mod activities;
 mod config;
 mod display;
@@ -150,5 +154,10 @@ fn main() {
     }
 
     let _ = term.clear_screen();
+
+    if config.fake_error {
+        println!("{}", "This is a fake error!".bright_red());
+    }
+
     println!("{}", "Session terminated.".bright_green());
 }

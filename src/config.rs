@@ -9,4 +9,5 @@ pub struct SessionConfig {
     pub minimal_output: bool,
     pub team_activity: bool,
     pub framework: String,
+    pub fake_error: bool,
 }

@@ -19,7 +19,7 @@ mod generators;
 mod types;
 use types::{Complexity, DevelopmentType, JargonLevel};
 
-/// A CLI tool that generates impressive-looking terminal output when stakeholders walk by
+/// A CLI tool that generates impressive-looking terminal output when stakeholders walk by alla
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
@@ -58,6 +58,10 @@ struct Args {
     /// Simulate a specific framework usage
     #[arg(short = 'F', long, default_value = "")]
     framework: String,
+
+    /// Create fake errors when session terminates
+    #[arg(short = 'e', long, default_value_t = false)]
+    fakeerror: bool,
 }
 
 fn main() {
@@ -72,6 +76,7 @@ fn main() {
         minimal_output: args.minimal,
         team_activity: args.team,
         framework: args.framework,
+        fake_error: args.fakeerror,
     };
 
     let running = Arc::new(AtomicBool::new(true));

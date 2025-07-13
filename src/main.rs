@@ -156,7 +156,7 @@ fn main() {
     let _ = term.clear_screen();
 
     if config.fake_error {
-        println!("{}", "This is a fake error!".bright_red());
+        println!("{}", fake_error::FE_GET_ERRORS().bright_red());
     }
 
     println!("{}", "Session terminated.".bright_green());
